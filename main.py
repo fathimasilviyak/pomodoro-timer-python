@@ -18,5 +18,6 @@ canvas = Canvas(width=200, height=224)
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(103, 112, image=tomato_img)
 canvas.pack()
-
+# Add text on top of image
+canvas.create_text(103, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 window.mainloop()
