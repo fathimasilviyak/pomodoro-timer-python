@@ -1,4 +1,5 @@
 from tkinter import *
+
 PINK = "#e2979c"
 RED = "#e7305b"
 GREEN = "#9bdeac"
@@ -7,6 +8,14 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
+
+
+# Count down mechanism
+def count_down(count):
+    canvas.itemconfig(timer_text, text=count)
+    if count > 0:
+        window.after(1000, count_down, count - 1)
+
 
 # UI setup
 window = Tk()
@@ -23,7 +32,9 @@ tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
 canvas.grid(column=1, row=1)
 # Add text on top of image
-canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+
+count_down(5)
 
 # Add start and reset buttons
 start_button = Button(text="Start", highlightthickness=0)
