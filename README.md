@@ -29,3 +29,5 @@ So the first break for five minutes a check mark will be appeared on the screen 
 
 Once you are done with the break, then it is going to go back to work and it is going to continue until you reach the longer break or until you click reset to stop and reset the timer.
 
+Tkinter Documentaion: https://docs.python.org/3/library/tkinter.html
+Tk Documentation: https://tcl.tk/man/tcl8.6/TkCmd/contents.htm
